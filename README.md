@@ -124,3 +124,9 @@ Use the same validation strategy when comparing Logistic Regression, Random Fore
 Track class balance and the decision threshold used for churn alerts. Validate dashboard KPIs against source data and compare models using recall, precision, and F1.
 
 For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
+
+### Technical Deep Dive
+
+Churn modelling should preserve the distinction between a probability score and a business decision. Evaluate candidate models on the same stratified validation strategy, inspect class imbalance, and select the alert threshold based on the relative cost of missed churners and unnecessary retention outreach. Keep clustering features and churn-prediction features conceptually separate unless there is a clear reason to combine them.
+
+Suggested engineering checks: fit preprocessing only on training data, calibrate probabilities if they drive decisions, validate dashboard KPIs against independent aggregations, and test missing/out-of-range form values.
