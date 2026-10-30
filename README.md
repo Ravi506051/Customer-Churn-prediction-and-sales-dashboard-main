@@ -107,3 +107,14 @@ git push -u origin main
 ```
 
 > Replace `REPOSITORY_URL` with your GitHub repository URL.
+
+## Model Review and Business Interpretation
+
+Use the same validation strategy when comparing Logistic Regression, Random Forest, and XGBoost. Since churn datasets can be imbalanced, review precision, recall, F1-score, and the confusion matrix rather than selecting a model by accuracy alone. Check that any threshold used for live scoring is appropriate for the business objective.
+
+## Dashboard Validation Checklist
+
+- Verify KPI totals against the source dataset.
+- Check filters and segment counts against independently calculated values.
+- Test the prediction page with valid, missing, and out-of-range inputs.
+- Confirm that the dashboard explains that churn scores are estimates, not guaranteed outcomes.
