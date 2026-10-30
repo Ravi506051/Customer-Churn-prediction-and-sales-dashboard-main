@@ -118,3 +118,9 @@ Use the same validation strategy when comparing Logistic Regression, Random Fore
 - Check filters and segment counts against independently calculated values.
 - Test the prediction page with valid, missing, and out-of-range inputs.
 - Confirm that the dashboard explains that churn scores are estimates, not guaranteed outcomes.
+
+## Project Development Notes
+
+Track class balance and the decision threshold used for churn alerts. Validate dashboard KPIs against source data and compare models using recall, precision, and F1.
+
+For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
