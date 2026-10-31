@@ -130,3 +130,11 @@ For reproducible updates, record the dataset/source version, environment and dep
 Churn modelling should preserve the distinction between a probability score and a business decision. Evaluate candidate models on the same stratified validation strategy, inspect class imbalance, and select the alert threshold based on the relative cost of missed churners and unnecessary retention outreach. Keep clustering features and churn-prediction features conceptually separate unless there is a clear reason to combine them.
 
 Suggested engineering checks: fit preprocessing only on training data, calibrate probabilities if they drive decisions, validate dashboard KPIs against independent aggregations, and test missing/out-of-range form values.
+
+## Model Governance and Business Validation
+
+- Evaluate churn models with precision, recall, F1-score, ROC-AUC, and a confusion matrix; select a threshold based on business costs rather than accuracy alone.
+- Check class imbalance and compare the model with a simple baseline.
+- Fit preprocessing only on training data and use a reproducible split or time-aware validation when customer records have timestamps.
+- Validate dashboard KPIs against the source data and clearly distinguish historical facts from model-generated churn risk.
+- Monitor feature drift and prediction quality before relying on scores for retention decisions; document the model version and training date.
