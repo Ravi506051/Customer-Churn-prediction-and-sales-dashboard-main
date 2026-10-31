@@ -138,3 +138,11 @@ Suggested engineering checks: fit preprocessing only on training data, calibrate
 - Fit preprocessing only on training data and use a reproducible split or time-aware validation when customer records have timestamps.
 - Validate dashboard KPIs against the source data and clearly distinguish historical facts from model-generated churn risk.
 - Monitor feature drift and prediction quality before relying on scores for retention decisions; document the model version and training date.
+
+## Analytical and Modelling Considerations
+
+- Define the churn label and prediction window clearly so the target is consistent across records.
+- Exclude post-churn information and other target-derived fields to prevent data leakage.
+- Review class imbalance and use precision, recall, F1-score, and ROC-AUC where appropriate.
+- Present dashboard KPIs with explicit date ranges, filters, denominators, and metric definitions.
+- Translate model outputs into investigation priorities rather than treating churn probabilities as certain outcomes.
