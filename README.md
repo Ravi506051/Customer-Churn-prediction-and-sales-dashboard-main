@@ -146,3 +146,10 @@ Suggested engineering checks: fit preprocessing only on training data, calibrate
 - Review class imbalance and use precision, recall, F1-score, and ROC-AUC where appropriate.
 - Present dashboard KPIs with explicit date ranges, filters, denominators, and metric definitions.
 - Translate model outputs into investigation priorities rather than treating churn probabilities as certain outcomes.
+
+## Model Monitoring and Business Validation
+
+- Compare candidate models on the same stratified validation split and inspect precision, recall, F1-score, and the confusion matrix.
+- Check probability calibration before using risk scores to prioritize customer-retention actions.
+- Report churn rates and segment sizes alongside dashboard KPIs so small groups are not over-interpreted.
+- Document feature definitions, data refresh dates, and any class-imbalance handling; avoid claiming that correlation explains why a customer leaves.
