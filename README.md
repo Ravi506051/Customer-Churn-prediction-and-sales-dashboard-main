@@ -34,3 +34,15 @@ Avoid exposing customer-level data in public dashboards. Document data provenanc
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Skills Demonstrated
+
+- Customer churn analysis
+- customer segmentation
+- K-Means clustering
+- Streamlit dashboarding
+- classification metrics.
+
+## Portfolio Context
+
+This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
